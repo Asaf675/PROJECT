@@ -2,9 +2,11 @@ package model.model;
 
 import java.util.HashMap;
 
-import model.Heuristics.Calculator2048;
+import model.Heuristics.Heuristic2048;
 import model.Heuristics.HeuristicFunction;
 import model.Heuristics.HeuristicRPG;
+import model.Heuristics.HeuristicTicTacToe;
+import model.Heuristics.HeuristicsCommon;
 
 public class HeuristicFactory {
 		
@@ -15,7 +17,7 @@ public class HeuristicFactory {
 	private class Heuristic2048Creator implements Creator {
 		@Override
 		public HeuristicFunction create() {
-			return new Calculator2048();
+			return new Heuristic2048();
 		}	
 	}
 	
@@ -27,12 +29,22 @@ public class HeuristicFactory {
 		}
 	}
 	
+	private class HeuristicTicTacToeCreator implements Creator {
+
+		@Override
+		public HeuristicFunction create() {
+			return new HeuristicTicTacToe();
+		}
+		
+	}
+	
 	HashMap<String, Creator> HeuristicCreators;
 	
 	public HeuristicFactory() {
 		HeuristicCreators = new HashMap<String,Creator>();
 		HeuristicCreators.put("2048",new Heuristic2048Creator() );
 		HeuristicCreators.put("RPG", new HeuristicRPGCreator());
+		HeuristicCreators.put("Tic Tac Toe", new HeuristicTicTacToeCreator());
 	}
 	
 	public HeuristicFunction createHeuristic(String type) {

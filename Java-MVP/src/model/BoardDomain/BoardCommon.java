@@ -61,7 +61,7 @@ public abstract class BoardCommon implements AI_Domain {
 	public abstract void getPlayerAction();
 	public abstract Cell[][] getCurrentStatus();
 	public abstract void reset();
-	
+	public abstract String toString();
 
 }
 

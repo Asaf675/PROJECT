@@ -439,5 +439,16 @@ public class Board2048model extends BoardCommon {
 		computerTurn();
 		freeCells = rows_size*columns_size - 2;
 		takenCells = 2;
+	}
+	
+	//convert the board to unique string
+	@Override
+	public String toString() {
+		String str = new String();
+		for(Cell2048[] a : game) {
+			for(Cell2048 b : a)
+				str += b.getValue();
+		}
+		return  Integer.toString(rows_size) + "," + Integer.toString(columns_size) +"," +str;
 	}	
 }

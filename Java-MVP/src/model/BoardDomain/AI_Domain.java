@@ -40,4 +40,6 @@ public interface AI_Domain {
 	// reset the game to the beginning state
 	public void reset();
 	
+	// override object method and convert the domain to unique string
+	public String toString();
 }

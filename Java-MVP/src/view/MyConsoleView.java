@@ -33,7 +33,8 @@ public class MyConsoleView extends Observable implements View {
 	System.out.println("Enter types of domain: ");
 	System.out.println("The options of the domains are : \n" +
 			"2048\n" +
-			"RPG");
+			"RPG\n" +
+			"Tic Tac Toe");
 	
 	try {
 		while(!(inputDomain=in.readLine()).equals("exit")) {

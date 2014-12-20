@@ -756,4 +756,17 @@ public class BoardRPGmodel extends BoardCommon {
 		}
 		}
 	
+	//convert the board to unique string
+	@Override
+	public String toString() {
+		String str = new String();
+		for(CellRPG[] a : game) {
+			for(CellRPG b : a) {
+				str += b.getDescription();
+				str += b.getValue();
+			}
+		}
+		return  Integer.toString(rows_size) + "," + Integer.toString(columns_size) +"," +str;
+	}	
+	
 }

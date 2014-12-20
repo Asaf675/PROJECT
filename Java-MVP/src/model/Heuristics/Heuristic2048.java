@@ -7,9 +7,9 @@ import model.BoardDomain.Board2048model;
 
 
 
-public class Calculator2048 extends HeuristicsCommon {
+public class Heuristic2048 extends HeuristicsCommon {
 	
-	public Calculator2048() {
+	public Heuristic2048() {
 			
 	}
 	

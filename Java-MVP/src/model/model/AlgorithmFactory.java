@@ -25,10 +25,11 @@ public class AlgorithmFactory {
 
 		@Override
 		public AI create(HeuristicFunction h) {
-			return new MiniMaxAlphaBeta(h,7);
+			return new MiniMaxAlphaBeta(h,9);
 		}
 		
 	}
+
 	
 	HashMap<String,Creator> AlgorithmCreator;
 	

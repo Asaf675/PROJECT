@@ -5,6 +5,7 @@ import java.util.HashMap;
 import model.BoardDomain.AI_Domain;
 import model.BoardDomain.Board2048model;
 import model.BoardDomain.BoardRPGmodel;
+import model.BoardDomain.BoardTicTacToeModel;
 
 
 public class DomainFactory {
@@ -24,7 +25,16 @@ public class DomainFactory {
 
 		@Override
 		public AI_Domain create() {
-		return new BoardRPGmodel();
+			return new BoardRPGmodel();
+		}
+		
+	}
+	
+	private class CreatorTicTacToe implements Creator {
+
+		@Override
+		public AI_Domain create() {
+			return new BoardTicTacToeModel();
 		}
 		
 	}
@@ -35,6 +45,7 @@ public class DomainFactory {
 		DomainsCreators = new HashMap<String, Creator>();
 		DomainsCreators.put("2048", new Creator2048());
 		DomainsCreators.put("RPG", new CreatorRPG());
+		DomainsCreators.put("Tic Tac Toe", new CreatorTicTacToe());
 	}
 	
 	public AI_Domain createDomain(String type) {

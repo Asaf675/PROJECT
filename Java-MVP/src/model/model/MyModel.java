@@ -54,7 +54,10 @@ public class MyModel extends Observable implements Model {
 					else if(domain.getClass().getName().contains("RPG"))
 						System.out.println("The options are : \n " +
 											"RPG");
-							
+					else if(domain.getClass().getName().contains("Tic"))
+						System.out.println("The options are : \n " +
+								"Tic Tac Toe");	
+					
 					heuristic = h.createHeuristic(in.readLine());
 					if(heuristic == null)
 						System.out.println("error 404 heuristic not found");
