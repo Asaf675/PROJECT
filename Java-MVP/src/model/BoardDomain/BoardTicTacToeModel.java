@@ -110,7 +110,8 @@ public class BoardTicTacToeModel extends BoardCommon {
 
 		Point temp=this.map.get(command);
 		String arr[]=command.split(",");
-		setSlot((int)temp.getX(), (int)temp.getY(),arr[2].charAt(0));
+		if(arr.length > 1)
+			setSlot((int)temp.getX(), (int)temp.getY(),arr[2].charAt(0));
 
 	}
 

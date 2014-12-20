@@ -44,7 +44,7 @@ public class HeuristicFactory {
 		HeuristicCreators = new HashMap<String,Creator>();
 		HeuristicCreators.put("2048",new Heuristic2048Creator() );
 		HeuristicCreators.put("RPG", new HeuristicRPGCreator());
-		HeuristicCreators.put("Tic Tac Toe", new HeuristicTicTacToeCreator());
+		HeuristicCreators.put("TicTacToe", new HeuristicTicTacToeCreator());
 	}
 	
 	public HeuristicFunction createHeuristic(String type) {

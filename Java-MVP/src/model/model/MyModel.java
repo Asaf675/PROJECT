@@ -56,7 +56,7 @@ public class MyModel extends Observable implements Model {
 											"RPG");
 					else if(domain.getClass().getName().contains("Tic"))
 						System.out.println("The options are : \n " +
-								"Tic Tac Toe");	
+								"TicTacToe");	
 					
 					heuristic = h.createHeuristic(in.readLine());
 					if(heuristic == null)

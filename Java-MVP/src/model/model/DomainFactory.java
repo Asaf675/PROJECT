@@ -45,7 +45,7 @@ public class DomainFactory {
 		DomainsCreators = new HashMap<String, Creator>();
 		DomainsCreators.put("2048", new Creator2048());
 		DomainsCreators.put("RPG", new CreatorRPG());
-		DomainsCreators.put("Tic Tac Toe", new CreatorTicTacToe());
+		DomainsCreators.put("TicTacToe", new CreatorTicTacToe());
 	}
 	
 	public AI_Domain createDomain(String type) {
