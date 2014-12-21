@@ -33,7 +33,7 @@ public class MiniMaxAlphaBeta extends MiniMaxCommon {
 	@Override
 	public Action BestMove(AI_Domain game) {
 	// sends to AlphaBeta the problem, alpha as 0 (minus infinity ), beta as plus infinity
-	return new Action( AlpaBeta(game,new Leaf(0),new Leaf(Integer.MAX_VALUE-10),true,depth,true,null).getPath() );
+	return new Action( AlpaBeta(game,new Leaf(Integer.MIN_VALUE+10),new Leaf(Integer.MAX_VALUE-10),true,depth,true,null).getPath() );
 	}
 	
 	//the artificial intelligence algorithm that find the best possible move 

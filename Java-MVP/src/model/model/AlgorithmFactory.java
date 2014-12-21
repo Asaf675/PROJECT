@@ -25,7 +25,7 @@ public class AlgorithmFactory {
 
 		@Override
 		public AI create(HeuristicFunction h) {
-			return new MiniMaxAlphaBeta(h,9);
+			return new MiniMaxAlphaBeta(h,7);
 		}
 		
 	}

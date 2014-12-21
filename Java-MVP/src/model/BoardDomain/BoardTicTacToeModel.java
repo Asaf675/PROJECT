@@ -110,15 +110,14 @@ public class BoardTicTacToeModel extends BoardCommon {
 
 		Point temp=this.map.get(command);
 		String arr[]=command.split(",");
-		if(arr.length > 1)
-			setSlot((int)temp.getX(), (int)temp.getY(),arr[2].charAt(0));
+		setSlot((int)temp.getX(), (int)temp.getY(),arr[2].charAt(0));
 
 	}
 
 	//the function get flag
 	//true-first player
 	//false- second player
-	//the function return array list of all the possible moves of the player in tis board
+	//the function return array list of all the possible moves of the player in this board
 	@Override
 	public ArrayList<String> allPossibleMoves(boolean whoPlays) {
 		ArrayList<String> arr=new ArrayList<String>();
